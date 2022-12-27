@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./assets/logoImc.png" alt="imc-logo">
+    </header>
+    <div class="container pt-sm-5">
+        <div class="row">
+            <div class="col-sm-6 pb-1 d-none d-sm-block">
+                <div class="container form-box">
+                    <span>A classificação do índice de massa corporal (IMC) pode ajudar a identificar problemas de obesidade ou desnutrição
+                        em crianças, adolescentes, adultos e idosos. O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado.
+                    </span> </br>
+                    <span class="text-danger">PS.: O IMC leva em consideração as variações naturais na forma do corpo, dando uma faixa de peso
+                        saudável para uma determinada altura. Entretanto, para dizer se você é saudável os profissionais de saúde não
+                        utilizam exclusivamente o seu IMC. Em caso de dúvida consulte um nutricionista.
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="container form-box">
+                    <form action="">
+                        <div class="mb-3">
+                            <label class="form-label" for="weight-box">Informe seu peso</label>
+                            <input class="form-control" type="number" name="weight-box" id="weight-box">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="height-box">Informe sua altura</label>
+                            <input class="form-control" type="number" name="height-box" id="height-box" pattern="[0-9]\.[0-9]">
+                        </div>
+                        <div class="container text-center">
+                            <button type="button" class="btn btn-calc" onclick="calcBmi()" >Calcular</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pop-up display-imc">
+            <div class="col-sm-6">
+                
+                <table class="table table-borderless">
+                    <thead>
+                        <tr class="table text-primary">
+                            <th scope="col"><span>IMC (Kg/m2)</span></th>
+                            <th scope="col"><span>Classificação</span></th>
+                        </tr>
+                        <tr class="row-skn">
+                            <th scope="col"><span>Menor que 18</span></th>
+                            <th scope="col"><span>Magreza</span></th>
+                        </tr>
+                        <tr class="row-normal">
+                            <th scope="col"><span>18,5 a 24,9</span></th>
+                            <th scope="col"><span>Normal</span></th>
+                        </tr>
+                        <tr class="row-overWeight">
+                            <th scope="col"><span>25 a 29,9</span></th>
+                            <th scope="col"><span>Sobrepeso</span></th>
+                        </tr>
+                        <tr class="grade-1">
+                            <th scope="col"><span>30 a 34,9</span></th>
+                            <th scope="col"><span>Obesidade grau I</span></th>
+                        </tr>
+                        <tr class="grade-2">
+                            <th scope="col"><span>35 a 39,9</span></th>
+                            <th scope="col"><span>Obesidade grau II</span></th>
+                        </tr>
+                    </thead>
+                </table>
+                
+            </div>
+            <div class="col-sm-6 p-3 text-white">
+                <div class="container d-flex text-center flex-column p-5 imc-box">
+                    <h3 class="row">Seu imc</h3><h3 class="imc">25.1</h3>
+                </div>
+            </div>
+            <div class="container text-center pb-1">
+                <button type="button" class="btn btn-new-calc" >Novo cálculo</button>
+            </div>
+        </div>
+    </div>
+    <script src="./JS/main.js"></script> 
+</body>
+</html>

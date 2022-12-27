@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&family=Nunito&display=swap');*{
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    width: 13rem;
+    padding: 10px 30px;
+}
+
+.form-box{
+    padding: 1rem;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 20px;
+    box-shadow: -2px 2px 15px rgb(224, 224, 224);
+}
+
+.pop-up{
+    display: none;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 20px;
+    width: 20%;
+}
+
+.pop-up.active{
+    margin-left: 0;
+    display: flex;
+    box-shadow: -2px 2px 15px rgb(224, 224, 224);
+    width: 100%;
+}
+
+.display-imc{
+    background: #fff;
+    position: relative;
+    top: -18rem;
+}
+
+.imc-box{
+    border: 1px solid rgb(243, 243, 243);
+    background: rgb(183, 226, 255);
+    border-radius: 20px;
+}
+
+.btn{
+    background: rgb(183, 226, 255);
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.btn:hover{
+    outline: 1px solid rgb(183, 226, 255);
+    color: rgb(183, 226, 255);
+}
+
+.imc{
+    align-items: center;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.row-skn.active{
+    background: rgb(255, 226, 63, 0.7 );
+    color: rgb(88, 88, 88);
+}
+
+.row-normal.active{
+    background: rgba(92, 204, 111, 0.7);
+        color: rgb(88, 88, 88);
+
+}
+
+.row-overWeight.active{
+    background: rgb(255, 159, 70, 0.7);
+        color: rgb(88, 88, 88);
+
+}
+
+.grade-1.active{
+    background: rgb(253, 109, 109, 0.7);
+        color: rgb(88, 88, 88);
+
+}
+
+.grade-2.active{
+    background: rgb(255, 44, 44);
+        color: rgb(88, 88, 88);
+
+}
+
