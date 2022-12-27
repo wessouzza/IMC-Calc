@@ -11,7 +11,6 @@ const calcBmi = () => {
   person.result = person.personWeight / person.heightSquare;
   printMesage();
   clearFields();
-  console.log(person);
 };
 
 const printMesage = () => {
